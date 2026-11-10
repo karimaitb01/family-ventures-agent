@@ -108,3 +108,7 @@ Le code fait ce qui doit être exact : vérifier les citations, calculer le scor
 - **Avec l'aide de Claude (Claude Code)** : recherche publique sur Family Ventures, écriture du code,
   des tests, des données fictives (thèse, réseau, decks), de ce README et de la présentation.
 - **Claude, à l'exécution** : c'est le modèle qui lit les decks et rédige les fiches (`sonnet` par défaut).
+
+## Présentation
+[presentation/Family_Ventures_agent_de_tri.pptx](presentation/Family_Ventures_agent_de_tri.pptx) (11 diapos, avec notes
+de l'orateur). Elle est générée par `presentation/generer_presentation.js` (pptxgenjs).
