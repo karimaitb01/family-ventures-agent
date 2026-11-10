@@ -110,5 +110,5 @@ Le code fait ce qui doit être exact : vérifier les citations, calculer le scor
 - **Claude, à l'exécution** : c'est le modèle qui lit les decks et rédige les fiches (`sonnet` par défaut).
 
 ## Présentation
-[presentation/Family_Ventures_agent_de_tri.pptx](presentation/Family_Ventures_agent_de_tri.pptx) (11 diapos, avec notes
+[PDF](presentation/Family_Ventures_agent_de_tri.pdf) · [PowerPoint](presentation/Family_Ventures_agent_de_tri.pptx) (11 diapos, avec notes
 de l'orateur). Elle est générée par `presentation/generer_presentation.js` (pptxgenjs).
