@@ -1,0 +1,5 @@
+claude-agent-sdk==0.2.172   # boucle de l'agent et outils personnalisés (abonnement Claude ou clé API)
+pypdf==6.17.0               # lecture du texte des decks PDF
+python-dotenv==1.2.3        # réglages facultatifs dans .env (MODELE, BUDGET_PAR_DECK_USD)
+reportlab==5.0.1            # génération des decks fictifs de démonstration
+pytest==9.2.0               # tests des garde-fous

@@ -1,0 +1,13 @@
+{
+  "avertissement": "Réseau d'associés FICTIF, inventé pour la démonstration. Aucune personne réelle.",
+  "associes": [
+    {"nom": "Associé A (fictif)", "famille": "groupe agroalimentaire familial", "expertises": ["agroalimentaire", "grande distribution", "usines de transformation"]},
+    {"nom": "Associé B (fictif)", "famille": "fabricant de matériaux de construction", "expertises": ["industrie lourde", "fours industriels", "décarbonation", "BTP"]},
+    {"nom": "Associé C (fictif)", "famille": "transporteur et logisticien", "expertises": ["logistique", "entrepôts", "transport routier", "supply chain"]},
+    {"nom": "Associé D (fictif)", "famille": "laboratoire pharmaceutique familial", "expertises": ["santé", "pharmacie", "réglementaire"]},
+    {"nom": "Associé E (fictif)", "famille": "ETI de mécanique de précision", "expertises": ["usinage", "maintenance industrielle", "PME industrielles", "aéronautique"]},
+    {"nom": "Associé F (fictif)", "famille": "family office multi-sectoriel", "expertises": ["logiciels B2B", "SaaS", "levée de fonds", "international"]},
+    {"nom": "Associé G (fictif)", "famille": "énergéticien régional", "expertises": ["énergie", "réseaux de chaleur", "efficacité énergétique"]},
+    {"nom": "Associé H (fictif)", "famille": "groupe textile et luxe", "expertises": ["luxe", "textile", "retail", "marques"]}
+  ]
+}

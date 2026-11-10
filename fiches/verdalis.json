@@ -1,0 +1,207 @@
+{
+  "fiche": {
+    "nom": "Verdalis",
+    "secteur": "Décarbonation de la chaleur industrielle (pompes à chaleur haute température)",
+    "stade": "Série A",
+    "montant_recherche": "6 M€ (ticket minimum 1 M€), valorisation pré-money 40 M€",
+    "resume": "Verdalis installe des pompes à chaleur haute température (jusqu'à 200 °C) en clé en main avec contrat de performance énergétique, et annonce 4 usines équipées. Le dossier est au cœur de la thèse et très accessible par le réseau, mais les chiffres sont incohérents (ARR 1,2 M€ contre CA 380 k€), la croissance annoncée est invraisemblable et la valorisation est trop élevée. À creuser avant toute rencontre.",
+    "criteres": {
+      "adequation_these": {
+        "note": 3,
+        "faits": [
+          "F1",
+          "F2",
+          "F11",
+          "F13"
+        ],
+        "commentaire": "Décarbonation de l'industrie, secteur prioritaire. Série A, ticket minimum de 1 M€ dans la fourchette."
+      },
+      "equipe": {
+        "note": 2,
+        "faits": [
+          "F7",
+          "F8"
+        ],
+        "commentaire": "CEO issu d'un énergéticien, CTO avec 12 ans de thermodynamique industrielle : expérience pertinente. Le deck ne dit pas s'ils sont à temps plein et ne présente pas d'équipe commerciale ou d'exécution."
+      },
+      "traction": {
+        "note": 2,
+        "faits": [
+          "F3",
+          "F4",
+          "F5",
+          "F9"
+        ],
+        "commentaire": "4 usines équipées, mais on ne sait pas si ce sont des pilotes payants. L'ARR (1,2 M€) et le CA 2025 (380 k€) ne concordent pas, et la croissance annoncée n'est pas crédible : traction à vérifier."
+      },
+      "marche": {
+        "note": 0,
+        "faits": [
+          "F6"
+        ],
+        "commentaire": "900 Md€ mondial d'ici 2030, sans source ni définition, ni part accessible : chiffre non étayé et très probablement surdimensionné."
+      },
+      "levier_reseau": {
+        "note": 3,
+        "faits": [
+          "F1",
+          "F2",
+          "F5"
+        ],
+        "commentaire": "Les associés B (fours industriels, décarbonation), A (usines agroalimentaires) et G (efficacité énergétique, chaleur) peuvent ouvrir des sites pilotes et des clients, ou valider la technologie."
+      },
+      "conditions": {
+        "note": 1,
+        "faits": [
+          "F3",
+          "F9",
+          "F12",
+          "F13"
+        ],
+        "commentaire": "Ticket dans la cible, mais 40 M€ pré-money représentent environ 33 fois l'ARR annoncé et plus de 100 fois le CA 2025, ce qui est hors de proportion avec la traction."
+      }
+    },
+    "alertes": [
+      {
+        "texte": "Chiffres contradictoires : ARR de 1,2 M€ (p.4) contre chiffre d'affaires 2025 de 380 k€ (p.7).",
+        "faits": [
+          "F3",
+          "F9"
+        ]
+      },
+      {
+        "texte": "Croissance invraisemblable : 40 % par mois pendant 18 mois représente une multiplication par environ 400, incompatible avec 4 usines équipées et un CA de 380 k€.",
+        "faits": [
+          "F4",
+          "F5",
+          "F9"
+        ]
+      },
+      {
+        "texte": "Taille de marché de 900 Md€ d'ici 2030 sans source, invraisemblable pour des pompes à chaleur industrielles.",
+        "faits": [
+          "F6"
+        ]
+      },
+      {
+        "texte": "Valorisation supérieure à 20 fois le revenu récurrent annuel : 40 M€ pour un ARR de 1,2 M€, soit environ 33 fois (plus de 100 fois le CA 2025).",
+        "faits": [
+          "F3",
+          "F9",
+          "F12"
+        ]
+      },
+      {
+        "texte": "Perte d'exploitation de 2,1 M€ pour 380 k€ de CA : forte consommation de trésorerie.",
+        "faits": [
+          "F9",
+          "F10"
+        ]
+      }
+    ],
+    "informations_manquantes": [
+      "Statut des 4 usines : pilotes payants, contrats signés ou installations livrées, et noms des clients",
+      "Définition de l'ARR et réconciliation avec le CA 2025",
+      "Temps plein des fondateurs, taille de l'équipe, répartition du capital",
+      "Trésorerie, runway et utilisation des fonds de la levée",
+      "Marge brute, coût et retour sur investissement pour le client, détail du contrat de performance",
+      "Concurrence, technologie et propriété intellectuelle, fournisseurs de pompes à chaleur",
+      "Investisseurs existants et levées précédentes"
+    ],
+    "questions_fondateurs": [
+      "Comment réconciliez-vous un ARR de 1,2 M€ avec un CA 2025 de 380 k€ ? Quelle est la définition de l'ARR et la liste des contrats qui le composent ?",
+      "Comment obtenez-vous 40 % de croissance mensuelle sur 18 mois avec 4 usines équipées ? Pouvez-vous fournir l'historique mensuel des revenus ?",
+      "Les 4 usines sont-elles des clients payants ? Quels contrats (durée, montant, performance garantie) et quels clients référents ?",
+      "D'où vient le chiffre de 900 Md€, et quelle part est réellement adressable pour vous (températures, secteurs, pays) ?",
+      "Sur quelle base justifiez-vous 40 M€ pré-money, soit environ 33 fois l'ARR, et quel est l'usage des 6 M€ ainsi que le runway après levée ?",
+      "Les deux fondateurs sont-ils à temps plein, et qui porte la vente et le déploiement sur site ?"
+    ],
+    "associes_suggeres": [
+      {
+        "nom": "Associé B (fictif)",
+        "raison": "Expertise en fours industriels et décarbonation : peut juger la technologie et ouvrir des sites pilotes."
+      },
+      {
+        "nom": "Associé G (fictif)",
+        "raison": "Énergéticien, expert en efficacité énergétique et réseaux de chaleur : peut vérifier l'économie des contrats de performance."
+      }
+    ],
+    "recommandation": "Creuser"
+  },
+  "faits": {
+    "F1": {
+      "page": 1,
+      "citation": "Décarboner la chaleur industrielle",
+      "fait": "Verdalis vise la décarbonation de la chaleur industrielle."
+    },
+    "F2": {
+      "page": 3,
+      "citation": "Pompes à chaleur haute température jusqu'à 200 °C",
+      "fait": "Solution : pompes à chaleur haute température jusqu'à 200 °C."
+    },
+    "F3": {
+      "page": 4,
+      "citation": "ARR de 1,2 M€ en 2025",
+      "fait": "ARR annoncé de 1,2 M€ en 2025."
+    },
+    "F4": {
+      "page": 4,
+      "citation": "Croissance de 40 % par mois depuis 18 mois",
+      "fait": "Croissance annoncée de 40 % par mois pendant 18 mois."
+    },
+    "F5": {
+      "page": 4,
+      "citation": "4 usines équipées dans l'agroalimentaire et la chimie",
+      "fait": "4 usines équipées, agroalimentaire et chimie."
+    },
+    "F6": {
+      "page": 5,
+      "citation": "Un marché mondial de 900 Md€ d'ici 2030",
+      "fait": "Marché mondial annoncé de 900 Md€ d'ici 2030, sans source."
+    },
+    "F7": {
+      "page": 6,
+      "citation": "Marc Delaunay, CEO : ancien de la direction stratégie d'un énergéticien",
+      "fait": "CEO issu de la stratégie d'un énergéticien."
+    },
+    "F8": {
+      "page": 6,
+      "citation": "Sofia Rinaldi, CTO : 12 ans en thermodynamique industrielle",
+      "fait": "CTO avec 12 ans en thermodynamique industrielle."
+    },
+    "F9": {
+      "page": 7,
+      "citation": "Chiffre d'affaires 2025 : 380 k€",
+      "fait": "Chiffre d'affaires 2025 de 380 k€."
+    },
+    "F10": {
+      "page": 7,
+      "citation": "Perte d'exploitation 2025 : 2,1 M€",
+      "fait": "Perte d'exploitation 2025 de 2,1 M€."
+    },
+    "F11": {
+      "page": 8,
+      "citation": "Montant recherché : 6 M€",
+      "fait": "Levée de 6 M€."
+    },
+    "F12": {
+      "page": 8,
+      "citation": "Valorisation pré-money : 40 M€",
+      "fait": "Valorisation pré-money de 40 M€."
+    },
+    "F13": {
+      "page": 8,
+      "citation": "Ticket minimum par investisseur : 1 M€",
+      "fait": "Ticket minimum de 1 M€, dans la fourchette 300 k€–2 M€."
+    }
+  },
+  "refus": [],
+  "cout": {
+    "modele": "sonnet",
+    "tours": 15,
+    "duree_s": 33,
+    "cout_usd": 0.083,
+    "statut": "success",
+    "essais_fiche": 1
+  }
+}

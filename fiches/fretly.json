@@ -1,0 +1,140 @@
+{
+  "fiche": {
+    "nom": "Fretly",
+    "secteur": "Logistique / supply chain (place de marché de fret de retour)",
+    "stade": "Pré-seed / Seed",
+    "montant_recherche": "Non précisé dans le deck",
+    "resume": "Fretly propose une place de marché qui met en relation chargeurs et transporteurs pour remplir les camions au retour, avec un matching automatique. Le secteur (logistique) et le stade collent à la thèse. Le deck ne contient aucun chiffre : ni traction, ni marché, ni équipe détaillée, ni montant de levée.",
+    "criteres": {
+      "adequation_these": {
+        "note": 2,
+        "faits": [
+          "F1",
+          "F2"
+        ],
+        "commentaire": "Logistique et supply chain sont des secteurs prioritaires, et le stade pré-seed/seed convient. Le ticket n'est pas connu, d'où 2 et non 3."
+      },
+      "equipe": {
+        "note": "inconnu",
+        "faits": [
+          "F5"
+        ],
+        "commentaire": "L'équipe est décrite par un simple adjectif, sans noms, parcours ni temps de travail."
+      },
+      "traction": {
+        "note": "inconnu",
+        "faits": [],
+        "commentaire": "Le deck ne donne ni client, ni pilote, ni revenu. Ce silence est un signal d'alerte."
+      },
+      "marche": {
+        "note": 0,
+        "faits": [
+          "F3",
+          "F6"
+        ],
+        "commentaire": "Aucun marché n'est chiffré ni sourcé. Seul un argument réglementaire qualitatif est avancé."
+      },
+      "levier_reseau": {
+        "note": 2,
+        "faits": [
+          "F1",
+          "F4"
+        ],
+        "commentaire": "L'Associé C (transporteur et logisticien) pourrait apporter des clients ou des flux de fret. Rien ne confirme encore le besoin ni l'intérêt."
+      },
+      "conditions": {
+        "note": "inconnu",
+        "faits": [
+          "F2"
+        ],
+        "commentaire": "Ni montant levé, ni valorisation, ni ticket ne figurent dans le deck."
+      }
+    },
+    "alertes": [
+      {
+        "texte": "Absence totale de chiffres de traction : aucun client, pilote, revenu ni indicateur d'usage dans les 6 pages.",
+        "faits": [
+          "F1",
+          "F4"
+        ]
+      },
+      {
+        "texte": "Marché non chiffré et problème non quantifié (ex. taux de camions à vide). L'argument réglementaire n'a ni source ni chiffre.",
+        "faits": [
+          "F3",
+          "F6"
+        ]
+      },
+      {
+        "texte": "Équipe non présentée : aucun nom ni parcours, et on ignore si les fondateurs sont à temps plein.",
+        "faits": [
+          "F5"
+        ]
+      }
+    ],
+    "informations_manquantes": [
+      "Montant recherché, valorisation et utilisation des fonds",
+      "Traction : nombre de transporteurs et de chargeurs inscrits, volumes, revenus, pilotes",
+      "Taille de marché chiffrée et sourcée",
+      "Noms, parcours et temps de travail des fondateurs",
+      "Modèle économique (commission, abonnement) et marges",
+      "Concurrence (places de marché de fret existantes) et différenciation",
+      "État du produit : MVP ou produit en production"
+    ],
+    "questions_fondateurs": [
+      "Combien de transporteurs et de chargeurs utilisent la plateforme aujourd'hui, et quel volume de fret ou de revenus cela représente-t-il ?",
+      "Qui sont les fondateurs, quelle est leur expérience dans le transport, et sont-ils à temps plein ?",
+      "Quel montant levez-vous, à quelle valorisation, et quels jalons ce financement permet-il d'atteindre ?",
+      "Quel est votre modèle de revenus (commission, abonnement) et quel est le revenu par trajet ?",
+      "Comment résolvez-vous le problème de démarrage d'une place de marché (offre et demande) face aux acteurs existants ?"
+    ],
+    "associes_suggeres": [
+      {
+        "nom": "Associé C (fictif)",
+        "raison": "Transporteur et logisticien : peut juger le besoin réel de fret de retour et ouvrir des flux ou des clients pilotes."
+      }
+    ],
+    "recommandation": "Creuser"
+  },
+  "faits": {
+    "F1": {
+      "page": 1,
+      "citation": "La plateforme qui remplit les camions vides",
+      "fait": "Fretly est une plateforme logistique de fret de retour pour camions."
+    },
+    "F2": {
+      "page": 1,
+      "citation": "Pré-seed / Seed",
+      "fait": "Stade annoncé : pré-seed / seed, sans montant de levée."
+    },
+    "F3": {
+      "page": 2,
+      "citation": "Les petits transporteurs n'ont pas d'outil pour trouver du fret de retour",
+      "fait": "Problème cité : les petits transporteurs manquent d'outil pour le fret de retour, sans chiffre."
+    },
+    "F4": {
+      "page": 3,
+      "citation": "Une place de marché qui met en relation chargeurs et transporteurs",
+      "fait": "Solution : place de marché chargeurs/transporteurs avec matching automatique."
+    },
+    "F5": {
+      "page": 5,
+      "citation": "Une équipe passionnée par la logistique et la tech",
+      "fait": "Équipe décrite sans noms, parcours, temps plein ou expérience."
+    },
+    "F6": {
+      "page": 4,
+      "citation": "La pression réglementaire sur les émissions du transport augmente",
+      "fait": "Argument « pourquoi maintenant » : réglementation sur les émissions, sans chiffre ni source."
+    }
+  },
+  "refus": [],
+  "cout": {
+    "modele": "sonnet",
+    "tours": 8,
+    "duree_s": 20,
+    "cout_usd": 0.05,
+    "statut": "success",
+    "essais_fiche": 1
+  }
+}
