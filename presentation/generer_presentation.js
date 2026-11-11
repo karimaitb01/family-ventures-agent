@@ -70,7 +70,7 @@ async function icone(Comp, color = "FFFFFF") {
   let s = pres.addSlide({ masterName: "TITRE_SOMBRE", sectionTitle: "Introduction" });
   s.addText("Un analyste de premier tri pour Family Ventures", { placeholder: "title" });
   s.addText("Un agent IA qui lit les pitch decks reçus et prépare, en 30 secondes, une fiche d'une page dont chaque fait est vérifié", { placeholder: "body" });
-  texte(s, "AI Agent Challenge · prototype Python · données 100 % fictives", { x: 0.8, y: 6.5, w: 11.7, h: 0.4, fontSize: 14, color: C.accent1, italic: true });
+  texte(s, "Brahim Ait Benamara · AI Agent Challenge · prototype Python · données 100 % fictives", { x: 0.8, y: 6.5, w: 11.7, h: 0.4, fontSize: 14, color: C.accent1, italic: true });
   s.addNotes("Je vais vous présenter un agent qui fait le premier tri des dossiers d'investissement. L'idée : il ne décide pas à votre place, il vous fait gagner le temps de lecture et vous dit sur quoi creuser.");
 
   // 2. Problème
@@ -256,14 +256,14 @@ async function icone(Comp, color = "FFFFFF") {
   s = pres.addSlide({ masterName: "TITRE_SOMBRE", sectionTitle: "Choix et suite" });
   s.addText("Qui a fait quoi", { placeholder: "title" });
   texte(s, [
-    { text: "Moi : ", options: { bold: true, color: C.accent1 } },
-    { text: "le choix du problème, la sobriété de l'agent, la règle « zéro invention » reprise de mon projet de candidatures automatisées, les choix d'outils, la relecture et la défense.", options: { breakLine: true } },
+    { text: "Brahim Ait Benamara : ", options: { bold: true, color: C.accent1 } },
+    { text: "le choix du sujet parmi les pistes proposées, les choix d'outils (Python, Claude Agent SDK sur abonnement), la règle « zéro invention » reprise de son projet de candidatures automatisées, le pilotage, la relecture et la défense.", options: { breakLine: true } },
     { text: " ", options: { breakLine: true, fontSize: 10 } },
     { text: "Avec Claude (Claude Code) : ", options: { bold: true, color: C.accent1 } },
-    { text: "la recherche publique, le code, les tests, les données fictives et cette présentation." },
+    { text: "les pistes de sujet, la recherche publique, la conception détaillée, le code, les tests, les données fictives et cette présentation." },
   ], { x: 0.8, y: 4.0, w: 11.7, h: 2.3, fontSize: 20, color: C.background1 });
   texte(s, "Code, fiches et decks de démo : github.com/karimaitb01/family-ventures-agent", { x: 0.8, y: 6.5, w: 11.7, h: 0.4, fontSize: 14, color: C.accent6, italic: true });
-  s.addNotes("Je l'ai dit dans le README aussi : j'ai utilisé l'IA pour écrire le code, comme vous l'encouragez. Ce que je défends, ce sont les choix : quel problème, quel niveau d'autonomie, où mettre les contrôles.");
+  s.addNotes("Je l'ai dit dans le README aussi : j'ai utilisé l'IA pour proposer des pistes et écrire le code, comme vous l'encouragez. Ce que je défends, ce sont les choix : quel problème, quel niveau d'autonomie, où mettre les contrôles.");
 
   await pres.writeFile({ fileName: OUT });
   await applyTheme(OUT, THEME);

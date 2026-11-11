@@ -101,12 +101,12 @@ Le code fait ce qui doit être exact : vérifier les citations, calculer le scor
    entre l'agent et un analyste et régler la grille.
 
 ## Qui a fait quoi
-- **Moi (le candidat)** : choix du sujet (tri des dossiers) parmi plusieurs pistes, choix d'un agent
-  sobre et contrôlé plutôt qu'un agent autonome, choix des outils (Python, Claude Agent SDK sur abonnement),
-  règle « zéro invention » reprise de mon propre projet de candidatures automatisées, relecture et
-  défense du résultat.
-- **Avec l'aide de Claude (Claude Code)** : recherche publique sur Family Ventures, écriture du code,
-  des tests, des données fictives (thèse, réseau, decks), de ce README et de la présentation.
+- **Brahim Ait Benamara** : choix du sujet (tri des dossiers) parmi les pistes proposées par l'IA, choix des
+  outils (Python, Claude Agent SDK sur son abonnement Claude), règle « zéro invention » reprise de son propre
+  projet de candidatures automatisées, pilotage du projet, relecture et défense du résultat.
+- **Avec l'aide de Claude (Claude Code)** : proposition des pistes de sujet, recherche publique sur Family Ventures,
+  conception détaillée et écriture du code, des tests, des données fictives (thèse, réseau, decks), de ce README
+  et de la présentation.
 - **Claude, à l'exécution** : c'est le modèle qui lit les decks et rédige les fiches (`sonnet` par défaut).
 
 ## Présentation
