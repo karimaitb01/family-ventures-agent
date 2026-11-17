@@ -14,6 +14,7 @@ from pathlib import Path
 
 from reportlab.lib.colors import HexColor
 from reportlab.lib.pagesizes import landscape, A4
+from reportlab.lib.utils import simpleSplit
 from reportlab.pdfgen import canvas
 
 DOSSIER = Path(__file__).resolve().parent.parent / "donnees" / "decks"
@@ -98,8 +99,10 @@ def generer(nom: str, titre: str, couleur: str, pages: list) -> Path:
         c.setFont("Helvetica", 18)
         y = hauteur - 160
         for puce in puces:
-            c.drawString(60, y, f"•  {puce}")
-            y -= 42
+            for k, ligne in enumerate(simpleSplit(puce, "Helvetica", 18, largeur - 140)):
+                c.drawString(60 if k == 0 else 78, y, f"•  {ligne}" if k == 0 else ligne)
+                y -= 24
+            y -= 18
         c.setFont("Helvetica-Oblique", 9)
         c.setFillColor(HexColor("#888888"))
         c.drawString(50, 25, MENTION)

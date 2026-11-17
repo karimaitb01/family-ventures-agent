@@ -10,6 +10,9 @@ vérifiées par le code.
 
 > Toutes les données du dépôt sont **fictives** : thèse, réseau d'associés et startups sont inventés.
 
+🎬 **Vidéo de démonstration (2 min 18)** : [presentation/Demo_agent_de_tri.mp4](presentation/Demo_agent_de_tri.mp4).
+Le terminal y rejoue, à son rythme réel, la sortie d'un vrai lancement de l'agent sur le deck Verdalis.
+
 ## Démo en une commande
 
 ```bash

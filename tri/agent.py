@@ -106,6 +106,12 @@ async def analyser(chemin: Path, bavard: bool = True) -> dict:
     poids = poids_criteres()
     noms = associes()
     etat = {"faits": {}, "refus": [], "fiche": None, "essais_fiche": 0}
+    nom = chemin.stem
+
+    def journal(message: str) -> None:
+        """Réponse du code à l'agent, affichée pour voir les contrôles travailler."""
+        if bavard:
+            print(f"  [{nom}]     {message}")
 
     @tool("noter_fait", "Enregistre un fait tiré du deck, avec la citation exacte et sa page. Renvoie son identifiant.",
           {"page": int, "citation": str, "fait": str})
@@ -113,19 +119,24 @@ async def analyser(chemin: Path, bavard: bool = True) -> dict:
         page, citation = int(args["page"]), args["citation"]
         if not citation_presente(pages, page, citation):
             etat["refus"].append({"page": page, "citation": citation})
+            journal(f"✗ REFUSÉ : introuvable page {page}")
             return _texte(f"REFUSÉ : « {citation} » n'apparaît pas mot pour mot à la page {page}. "
                           "Recopie exactement le texte du deck, ou n'utilise pas ce fait.")
         ident = f"F{len(etat['faits']) + 1}"
         etat["faits"][ident] = {"page": page, "citation": citation, "fait": args["fait"]}
+        journal(f"✓ {ident} : citation trouvée page {page}")
         return _texte(f"{ident} enregistré.")
 
     @tool("calculer", "Calcule une expression arithmétique (+ - * / ** et parenthèses), ex. « 1.4 ** 18 » ou « 40 / 1.2 ».",
           {"expression": str})
     async def calculer(args):
         try:
-            return _texte(f"{args['expression']} = {evaluer(args['expression']):,.4g}".replace(",", " "))
+            resultat = f"{evaluer(args['expression']):,.4g}".replace(",", " ").replace(".", ",")
         except ValueError as erreur:
+            journal(f"✗ calcul impossible : {erreur}")
             return _texte(f"ERREUR : {erreur}")
+        journal(f"= {resultat}")
+        return _texte(f"{args['expression']} = {resultat}")
 
     @tool("rendre_fiche", "Rend la fiche finale. Le code la contrôle et renvoie les erreurs à corriger.",
           _schema_fiche(poids))
@@ -134,8 +145,10 @@ async def analyser(chemin: Path, bavard: bool = True) -> dict:
         etat["essais_fiche"] += 1
         erreurs = erreurs_fiche(fiche, etat["faits"], poids, noms)
         if erreurs:
+            journal(f"✗ FICHE REFUSÉE : {len(erreurs)} erreur(s) renvoyée(s) à l'agent")
             return _texte("FICHE REFUSÉE, corrige puis rappelle rendre_fiche :\n- " + "\n- ".join(erreurs))
         etat["fiche"] = fiche
+        journal("✓ fiche acceptée : chaque note a ses preuves, associés et règles vérifiés")
         return _texte("Fiche acceptée. Termine maintenant.")
 
     options = ClaudeAgentOptions(
@@ -157,7 +170,7 @@ async def analyser(chemin: Path, bavard: bool = True) -> dict:
         if bavard and isinstance(message, AssistantMessage):
             for bloc in message.content:
                 if isinstance(bloc, TextBlock) and bloc.text.strip():
-                    print(f"  [{chemin.stem}] {bloc.text.strip()[:200]}")
+                    print(f"  [{chemin.stem}] {bloc.text.strip().splitlines()[0][:150]}")
                 elif isinstance(bloc, ToolUseBlock):
                     resume = bloc.input.get("citation") or bloc.input.get("expression") or bloc.input.get("recommandation") or ""
                     print(f"  [{chemin.stem}] → {bloc.name.removeprefix('mcp__tri__')} {str(resume)[:90]}")
