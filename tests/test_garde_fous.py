@@ -81,3 +81,29 @@ def test_score_calcule_par_le_code():
     criteres["traction"] = {"note": "inconnu"}
     note, couverture = score(criteres, POIDS)
     assert note == 100 and couverture == pytest.approx(9 / 11)
+
+
+def test_tableau_garde_tous_les_dossiers_et_les_classe():
+    import trier
+    lignes = trier.lignes_du_tableau(POIDS)
+    assert {l["deck"] for l in lignes} >= {"atelio", "verdalis", "fretly", "lumora"}
+    ordre = ["Rencontrer", "Creuser", "Passer"]
+    rangs = [ordre.index(l["reco"]) for l in lignes if l["reco"] in ordre]
+    assert rangs == sorted(rangs)
+
+
+def test_fiche_html_echappe_le_texte_du_deck():
+    from tri.page import fiche_html
+    criteres = {c: {"note": "inconnu", "faits": [], "commentaire": "<script>alert(1)</script>"} for c in POIDS}
+    fiche = {"nom": "X", "resume": "r", "criteres": criteres, "alertes": [], "recommandation": "Passer"}
+    page = fiche_html(fiche, {}, POIDS, "deck.pdf", {})
+    assert "<script>alert(1)</script>" not in page and "&lt;script&gt;" in page
+
+
+def test_calculatrice_juste_et_fermee():
+    from tri.calcul import calculer
+    assert round(calculer("1.4 ** 18")) == 427          # la croissance que l'IA avait estimée à 190 000
+    assert calculer("40 / 1,2") == pytest.approx(33.33, abs=0.01)
+    for interdit in ("__import__('os')", "open('x')", "2 ** 1000", "1/0"):
+        with pytest.raises(ValueError):
+            calculer(interdit)

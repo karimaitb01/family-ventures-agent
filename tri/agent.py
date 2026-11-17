@@ -2,7 +2,7 @@
 
 Il tourne avec le Claude Agent SDK, donc sur l'abonnement Claude de la personne connectée à Claude Code
 (ou sur une clé API si ANTHROPIC_API_KEY est définie). Il n'a AUCUN outil intégré (ni fichiers, ni web,
-ni commandes) : seulement les deux outils ci-dessous, dont le code contrôle chaque appel.
+ni commandes) : seulement les trois outils ci-dessous, dont le code contrôle chaque appel.
 """
 
 import json
@@ -21,6 +21,7 @@ from claude_agent_sdk import (
     tool,
 )
 
+from tri.calcul import calculer as evaluer
 from tri.deck import citation_presente, lire_pages, texte_pour_agent
 from tri.fiche import RECOMMANDATIONS, THESE, RESEAU, associes, erreurs_fiche, poids_criteres
 
@@ -46,7 +47,8 @@ MÉTHODE
 3. Compare les pages entre elles. Deux chiffres incompatibles, une croissance ou un marché invraisemblable,
    une valorisation hors de proportion → une alerte qui cite les faits concernés. Tu peux utiliser tes
    connaissances générales pour juger qu'un chiffre est invraisemblable, jamais pour ajouter un fait sur
-   l'entreprise.
+   l'entreprise. Pour TOUT calcul (ratio, multiple de valorisation, croissance composée…), appelle
+   calculer(expression) et reprends son résultat : ne calcule jamais de tête.
 4. Liste ce que le deck ne dit pas, propose au moins 3 questions précises pour les fondateurs, et
    suggère 1 ou 2 associés du réseau dont l'expertise aide à juger le dossier (aucun si personne ne colle).
 5. Appelle rendre_fiche. Si le code renvoie des erreurs, corrige-les et rappelle rendre_fiche.
@@ -117,6 +119,14 @@ async def analyser(chemin: Path, bavard: bool = True) -> dict:
         etat["faits"][ident] = {"page": page, "citation": citation, "fait": args["fait"]}
         return _texte(f"{ident} enregistré.")
 
+    @tool("calculer", "Calcule une expression arithmétique (+ - * / ** et parenthèses), ex. « 1.4 ** 18 » ou « 40 / 1.2 ».",
+          {"expression": str})
+    async def calculer(args):
+        try:
+            return _texte(f"{args['expression']} = {evaluer(args['expression']):,.4g}".replace(",", " "))
+        except ValueError as erreur:
+            return _texte(f"ERREUR : {erreur}")
+
     @tool("rendre_fiche", "Rend la fiche finale. Le code la contrôle et renvoie les erreurs à corriger.",
           _schema_fiche(poids))
     async def rendre_fiche(args):
@@ -132,8 +142,8 @@ async def analyser(chemin: Path, bavard: bool = True) -> dict:
         model=MODELE,
         system_prompt=SYSTEME.format(these=THESE.read_text(encoding="utf-8"), reseau=RESEAU.read_text(encoding="utf-8")),
         tools=[],                                        # aucun outil intégré : ni fichiers, ni web, ni commandes
-        mcp_servers={"tri": create_sdk_mcp_server(name="tri", tools=[noter_fait, rendre_fiche])},
-        allowed_tools=["mcp__tri__noter_fait", "mcp__tri__rendre_fiche"],
+        mcp_servers={"tri": create_sdk_mcp_server(name="tri", tools=[noter_fait, calculer, rendre_fiche])},
+        allowed_tools=["mcp__tri__noter_fait", "mcp__tri__calculer", "mcp__tri__rendre_fiche"],
         permission_mode="dontAsk",
         setting_sources=[],                              # n'hérite d'aucun réglage local
         max_turns=40,
@@ -149,7 +159,7 @@ async def analyser(chemin: Path, bavard: bool = True) -> dict:
                 if isinstance(bloc, TextBlock) and bloc.text.strip():
                     print(f"  [{chemin.stem}] {bloc.text.strip()[:200]}")
                 elif isinstance(bloc, ToolUseBlock):
-                    resume = bloc.input.get("citation") or bloc.input.get("recommandation") or ""
+                    resume = bloc.input.get("citation") or bloc.input.get("expression") or bloc.input.get("recommandation") or ""
                     print(f"  [{chemin.stem}] → {bloc.name.removeprefix('mcp__tri__')} {str(resume)[:90]}")
         elif isinstance(message, ResultMessage):
             resultat = message

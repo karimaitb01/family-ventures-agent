@@ -1,28 +1,27 @@
 {
   "fiche": {
     "nom": "Atelio",
-    "secteur": "Industrie du futur / logiciel B2B pour PME industrielles (maintenance prédictive)",
+    "secteur": "Industrie du futur / maintenance prédictive (SaaS + capteurs)",
     "stade": "Seed",
     "montant_recherche": "1,5 M€ (pré-money 7,5 M€)",
-    "resume": "Atelio propose aux PME industrielles des capteurs vibratoires et un SaaS de maintenance prédictive à 1 200 € par machine et par an. Traction solide : 420 k€ d'ARR, 35 clients, rétention de 96 % et 2 pilotes payants avec des ETI de l'aéronautique, portée par trois fondateurs à temps plein ayant une expérience industrielle. Points de vigilance : taille de marché non sourcée et valorisation autour de 18x l'ARR en pré-money (environ 21x en post-money).",
+    "resume": "Atelio vend aux PME industrielles un système de maintenance prédictive (capteurs vibratoires + SaaS à 1 200 €/machine/an). Traction solide : ARR de 420 k€, 35 clients, rétention de 96 % et 2 pilotes payants avec des ETI de l'aéronautique, portés par une équipe complète à temps plein. Points de vigilance : valorisation élevée (≈ 17,9x l'ARR en pré-money, ≈ 21,4x en post-money) et marché fondé sur une estimation interne.",
     "criteres": {
       "adequation_these": {
         "note": 3,
         "faits": [
           "F1",
-          "F11",
-          "F12"
+          "F2"
         ],
-        "commentaire": "Industrie du futur et logiciel B2B pour PME, stade Seed, ticket de 1,5 M€ dans la fourchette (300 k€ à 2 M€)."
+        "commentaire": "Industrie du futur, Seed, ticket de 1,5 M€ dans la fourchette 300 k€–2 M€. Géographie France (Paris) selon la page 1."
       },
       "equipe": {
         "note": 3,
         "faits": [
           "F9",
           "F10",
-          "F8"
+          "F11"
         ],
-        "commentaire": "Trois fondateurs à temps plein depuis 2024, avec une expérience industrielle (CEO, ancien directeur d'usine) et une compétence technique (CTO docteur en traitement du signal)."
+        "commentaire": "Trois fondateurs à temps plein depuis 2024, avec expérience industrielle (CEO, COO ancien directeur d'usine) et un CTO docteur en traitement du signal."
       },
       "traction": {
         "note": 3,
@@ -31,16 +30,15 @@
           "F5",
           "F6"
         ],
-        "commentaire": "ARR de 420 k€ (seuil de 200 k€ dépassé), 35 clients, rétention de 96 % et 2 pilotes payants chez des ETI de l'aéronautique."
+        "commentaire": "ARR de 420 k€ (≥ 200 k€), 35 clients, rétention de 96 % et 2 pilotes payants avec des ETI aéronautiques."
       },
       "marche": {
         "note": 1,
         "faits": [
-          "F2",
           "F7",
           "F8"
         ],
-        "commentaire": "Marché chiffré (600 M€ France, 4 Md€ Europe), mais fondé sur une estimation interne et sans source externe."
+        "commentaire": "Marché chiffré (600 M€ en France, 4 Md€ en Europe), mais fondé sur une estimation interne et sans source externe."
       },
       "levier_reseau": {
         "note": 3,
@@ -48,60 +46,69 @@
           "F6",
           "F3"
         ],
-        "commentaire": "L'Associé E (ETI de mécanique de précision, aéronautique, PME industrielles) peut ouvrir des clients et des sites pilotes. Cible exacte : PME de mécanique et ETI aéronautiques."
+        "commentaire": "Cible PME mécaniques et ETI aéronautiques : l'Associé E (mécanique de précision, maintenance industrielle, aéronautique) peut ouvrir des sites pilotes et des clients."
       },
       "conditions": {
         "note": 2,
         "faits": [
-          "F12",
-          "F13",
-          "F4"
+          "F2",
+          "F4",
+          "F12"
         ],
-        "commentaire": "Ticket dans la cible. Pré-money 7,5 M€, soit environ 17,9x l'ARR, sous le seuil d'alerte de 20x. Le post-money (9 M€) atteint environ 21,4x."
+        "commentaire": "Ticket dans la cible. Valorisation de 7,5 M€ pré-money, soit environ 17,9x l'ARR, sous le seuil de 20x. En post-money (9 M€), le multiple atteint environ 21,4x."
       }
     },
     "alertes": [
       {
-        "texte": "Marché non sourcé : estimation interne pour les 14 000 PME, et 600 M€ / 4 Md€ sans source. Le chiffre de 80 % de PME sans outil prédictif n'est pas sourcé non plus.",
+        "texte": "Valorisation à la limite du seuil de 20x l'ARR : 7,5 M€ pré-money / 420 k€ = 17,9x, mais 9 M€ post-money / 420 k€ = 21,4x.",
         "faits": [
-          "F2",
-          "F7",
-          "F8"
+          "F4",
+          "F12"
         ]
       },
       {
-        "texte": "Valorisation proche du seuil de 20x l'ARR : environ 17,9x en pré-money, environ 21,4x en post-money (9 M€ / 420 k€).",
+        "texte": "Taille de marché peu fiable : la base de 14 000 PME vient d'une estimation interne, et les 600 M€ / 4 Md€ n'ont pas de source. 600 M€ pour 14 000 PME représente environ 42 900 € par PME, soit ≈ 36 machines à 1 200 €, hypothèse non expliquée.",
         "faits": [
+          "F7",
+          "F8",
+          "F3"
+        ]
+      },
+      {
+        "texte": "Les 420 k€ d'ARR à 1 200 €/machine représentent environ 350 machines, soit ≈ 10 machines par client pour 35 clients. Ce n'est pas contradictoire, mais le deck ne le détaille pas et il faut le vérifier.",
+        "faits": [
+          "F3",
           "F4",
-          "F13"
+          "F5"
         ]
       }
     ],
     "informations_manquantes": [
-      "Croissance de l'ARR dans le temps et date de création de l'entreprise",
-      "Nombre de machines équipées et répartition des clients (concentration)",
-      "Marges brutes et coût des capteurs",
-      "Détail et conditions des pilotes aéronautiques (durée, prix, conversion)",
-      "Burn, runway actuel, levées précédentes et cap table",
-      "Concurrence nommée et différenciation technique",
-      "Source et méthode du calcul du marché adressable"
+      "Nombre de machines équipées et répartition de l'ARR par client (concentration)",
+      "Croissance de l'ARR, historique mensuel et churn en valeur",
+      "Marge brute, coût et logistique des capteurs (matériel vendu ou loué)",
+      "Burn actuel, trésorerie et runway",
+      "Concurrence directe et différenciation",
+      "Précision réelle de la prédiction (le « 10 jours à l'avance ») et références clients",
+      "Cap table, investisseurs existants et utilisation de la valeur du tour",
+      "Détail des pilotes aéronautiques (clients, montants, calendrier de conversion)"
     ],
     "questions_fondateurs": [
-      "Comment l'ARR de 420 k€ a-t-il évolué sur les 12 derniers mois, et combien de machines équipées cela représente-t-il ?",
-      "Quelle est la marge brute, capteurs inclus, et que représente l'industrialisation des capteurs à 20 % de la levée ?",
-      "Comment avez-vous calculé le marché de 600 M€ et le chiffre de 80 % de PME sans outil prédictif ?",
-      "Quels sont les termes des 2 pilotes aéronautiques : prix, durée, critères de conversion en contrat ?",
-      "Quelle est la précision de la prédiction à 10 jours (faux positifs, pannes évitées) et comment l'avez-vous mesurée chez vos clients ?",
-      "Comment justifiez-vous une valorisation de 7,5 M€ pré-money et quel est le coût d'acquisition client ?"
+      "Combien de machines sont équipées aujourd'hui, et quelle part de l'ARR représentent les 5 plus gros clients ?",
+      "Quelle est la croissance mensuelle de l'ARR sur les 12 derniers mois, et comment se compose le taux de rétention de 96 % (en clients ou en valeur) ?",
+      "Comment est calculé le marché de 600 M€ (nombre de machines par PME, taux d'adoption) et sur quelles sources ?",
+      "Quelle est la marge brute, capteurs inclus, et quel est le coût d'acquisition d'un client ?",
+      "Quelles sont les performances mesurées de la prédiction (taux de détection, faux positifs) et sur combien de pannes ?",
+      "Quels sont les termes des 2 pilotes aéronautiques, et quelle est la probabilité de conversion en contrats récurrents ?"
     ],
     "associes_suggeres": [
       {
         "nom": "Associé E (fictif)",
-        "raison": "ETI de mécanique de précision, aéronautique et maintenance industrielle : peut juger le produit, ouvrir des sites pilotes et des clients PME industrielles."
+        "raison": "ETI de mécanique de précision, expert en maintenance industrielle, PME industrielles et aéronautique : cœur de cible d'Atelio, il peut ouvrir des sites pilotes et valider le produit."
       },
       {
         "nom": "Associé F (fictif)",
-        "raison": "Expertise SaaS et levée de fonds : peut évaluer le modèle d'abonnement, la valorisation et la stratégie de croissance."
+        "raison": "Expert en SaaS et levée de fonds : il peut juger la valorisation (≈ 17,9x l'ARR pré-money) et les métriques SaaS."
       }
     ],
     "recommandation": "Rencontrer"
@@ -110,75 +117,70 @@
     "F1": {
       "page": 1,
       "citation": "La maintenance prédictive enfin accessible aux PME industrielles",
-      "fait": "Atelio vend de la maintenance prédictive aux PME industrielles."
+      "fait": "Atelio fait de la maintenance prédictive pour PME industrielles"
     },
     "F2": {
-      "page": 2,
-      "citation": "80 % des PME industrielles françaises n'ont aucun outil de maintenance prédictive",
-      "fait": "Affirmation de marché sans source."
+      "page": 1,
+      "citation": "Levée Seed : 1,5 M€",
+      "fait": "Levée Seed de 1,5 M€"
     },
     "F3": {
       "page": 3,
       "citation": "Abonnement de 1 200 € par machine et par an",
-      "fait": "Prix : 1 200 € par machine et par an."
+      "fait": "Modèle SaaS à 1 200 € par machine et par an"
     },
     "F4": {
       "page": 4,
       "citation": "ARR de 420 k€ à fin février 2026",
-      "fait": "ARR de 420 k€ à fin février 2026."
+      "fait": "ARR de 420 k€ à fin février 2026"
     },
     "F5": {
       "page": 4,
       "citation": "35 clients PME, taux de rétention de 96 %",
-      "fait": "35 clients PME, rétention 96 %."
+      "fait": "35 clients PME, rétention 96 %"
     },
     "F6": {
       "page": 4,
       "citation": "2 pilotes payants en cours avec des ETI de l'aéronautique",
-      "fait": "2 pilotes payants avec des ETI de l'aéronautique."
+      "fait": "2 pilotes payants avec des ETI de l'aéronautique"
     },
     "F7": {
       "page": 5,
       "citation": "14 000 PME industrielles en France équipées de machines-outils (source : estimation interne)",
-      "fait": "Marché basé sur une estimation interne."
+      "fait": "Marché : 14 000 PME, source estimation interne"
     },
     "F8": {
       "page": 5,
       "citation": "Marché adressable estimé à 600 M€ en France, 4 Md€ en Europe",
-      "fait": "Marché adressable 600 M€ France, 4 Md€ Europe, sans source."
+      "fait": "Marché adressable 600 M€ France, 4 Md€ Europe, sans source"
     },
     "F9": {
       "page": 6,
       "citation": "Les trois fondateurs sont à temps plein depuis 2024",
-      "fait": "Trois fondateurs à temps plein depuis 2024."
+      "fait": "Trois fondateurs à temps plein depuis 2024"
     },
     "F10": {
       "page": 6,
       "citation": "Hugo Vernet, COO : ancien directeur d'usine",
-      "fait": "COO ancien directeur d'usine."
+      "fait": "COO ancien directeur d'usine"
     },
     "F11": {
       "page": 6,
       "citation": "Claire Moreau, CEO : 9 ans chez un équipementier industriel, ingénieure Arts et Métiers",
-      "fait": "CEO avec 9 ans d'expérience industrielle."
+      "fait": "CEO 9 ans chez équipementier industriel"
     },
     "F12": {
       "page": 7,
-      "citation": "Montant recherché : 1,5 M€",
-      "fait": "Ticket total 1,5 M€."
-    },
-    "F13": {
-      "page": 7,
       "citation": "Valorisation pré-money : 7,5 M€",
-      "fait": "Pré-money 7,5 M€, soit ~17,9x l'ARR (post-money 9 M€, ~21,4x)."
+      "fait": "Valorisation pré-money 7,5 M€"
     }
   },
   "refus": [],
   "cout": {
     "modele": "sonnet",
-    "tours": 15,
-    "duree_s": 30,
-    "cout_usd": 0.072,
+    "tours": 20,
+    "duree_s": 33,
+    "cout_usd": 0.086,
     "statut": "success",
     "essais_fiche": 1
   }

@@ -1,0 +1,47 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Fretly : Creuser</title><style>
+:root { --encre:#1F2A44; --doux:#4A5670; --fond:#F4F6FA; --carte:#FFFFFF; --or:#B08D57; --ligne:#D8DEE9; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--fond); color:var(--encre); font:16px/1.5 Calibri, "Segoe UI", Arial, sans-serif; }
+main { max-width:980px; margin:0 auto; padding:32px 20px 48px; }
+h1 { font-family:Cambria, Georgia, serif; font-size:34px; margin:0; }
+h2 { font-family:Cambria, Georgia, serif; font-size:21px; margin:28px 0 10px; }
+.entete { display:flex; justify-content:space-between; align-items:flex-start; gap:24px; }
+.entete > div:first-child { flex:1 1 auto; min-width:0; }
+.score { flex:0 0 auto; }
+.badge { display:inline-block; color:#fff; border-radius:999px; padding:4px 14px; font-weight:bold; font-size:15px; }
+.score { text-align:right; }
+.score b { font-family:Cambria, Georgia, serif; font-size:44px; line-height:1; }
+.score small, .meta { color:var(--doux); font-size:14px; }
+.carte { background:var(--carte); border-radius:10px; padding:16px 18px; box-shadow:0 1px 3px rgba(31,42,68,.08); }
+table { width:100%; border-collapse:collapse; background:var(--carte); border-radius:10px; overflow:hidden; font-size:14px; }
+th { background:var(--encre); color:#fff; text-align:left; padding:8px 10px; }
+td { padding:8px 10px; border-top:1px solid var(--ligne); vertical-align:top; }
+.note { white-space:nowrap; font-weight:bold; }
+.points span { display:inline-block; width:11px; height:11px; border-radius:50%; background:var(--ligne); margin-right:3px; }
+.points span.plein { background:var(--or); }
+.cit { display:block; color:var(--doux); font-size:13px; margin-top:3px; }
+.cit i { font-style:normal; background:#EEF1F6; border-radius:4px; padding:0 5px; margin-right:4px; color:var(--encre); font-weight:bold; }
+.alerte { background:#FBEFEF; border-radius:10px; padding:12px 16px; margin-bottom:10px; }
+.alerte b { color:#A63D40; }
+ul, ol { margin:0; padding-left:22px; }
+li { margin:4px 0; }
+.pied { margin-top:28px; color:var(--doux); font-size:13px; font-style:italic; }
+a { color:#1F5C99; }
+@media (max-width:640px) { .entete { flex-direction:column; } .score { text-align:left; } h1 { font-size:28px; } }
+</style></head><body><main>
+<div class="entete">
+  <div><h1>Fretly</h1>
+    <p class="meta">Logistique / supply chain (place de marché fret) · Pré-seed / Seed · Non précisé dans le deck</p>
+    <span class="badge" style="background:#C27A12">Creuser</span></div>
+  <div class="score"><b>67</b><small>/100</small><br><small>calculé sur 45 % de la grille</small></div>
+</div>
+<h2>En bref</h2><div class="carte">Fretly est une place de marché qui met en relation chargeurs et transporteurs pour remplir les camions au retour, avec matching automatique. Le secteur est au cœur de la thèse, mais le deck ne donne aucun chiffre : ni traction, ni marché, ni équipe nommée, ni montant ni valorisation. Il est trop vide pour juger, mais l&#x27;Associé C peut apporter un levier direct.</div>
+<h2>Alertes</h2><div class="alerte"><b>⚠ Absence totale de chiffres de traction : aucun client, pilote, volume ou revenu dans le deck.</b><span class="cit"><i>p.3</i>« Une place de marché qui met en relation chargeurs et transporteurs »</span></div><div class="alerte"><b>⚠ Marché non chiffré et argument « pourquoi maintenant » sans source ni donnée.</b><span class="cit"><i>p.4</i>« La pression réglementaire sur les émissions du transport augmente »</span></div><div class="alerte"><b>⚠ Équipe décrite uniquement comme « passionnée » : pas de noms, rôles, expérience ni statut temps plein/partiel (le critère du fondateur à temps partiel ne peut pas être écarté).</b><span class="cit"><i>p.5</i>« Une équipe passionnée par la logistique et la tech »</span></div>
+<h2>Grille du fonds</h2>
+<table><tr><th>Critère</th><th>Note</th><th>Justification et preuves dans le deck</th></tr><tr><td><b>adequation these</b><br><small>poids 3</small></td><td><span class="note points"><span class="plein"></span><span class="plein"></span><span class=""></span>2/3</span></td><td>Logistique = secteur prioritaire et stade Seed dans la cible ; ticket non connu, donc pas 3.<span class="cit"><i>p.1</i>« La plateforme qui remplit les camions vides »</span><span class="cit"><i>p.1</i>« Pré-seed / Seed »</span><span class="cit"><i>p.3</i>« Une place de marché qui met en relation chargeurs et transporteurs »</span></td></tr><tr><td><b>equipe</b><br><small>poids 2</small></td><td><span class="note">inconnu</span></td><td>Aucun nom, parcours ni statut temps plein/partiel : impossible de juger.<span class="cit"><i>p.5</i>« Une équipe passionnée par la logistique et la tech »</span></td></tr><tr><td><b>traction</b><br><small>poids 2</small></td><td><span class="note">inconnu</span></td><td>Aucun chiffre, client ou pilote cité dans le deck.</td></tr><tr><td><b>marche</b><br><small>poids 1</small></td><td><span class="note">inconnu</span></td><td>Aucune taille de marché chiffrée ; seul un argumentaire réglementaire qualitatif.<span class="cit"><i>p.4</i>« La pression réglementaire sur les émissions du transport augmente »</span></td></tr><tr><td><b>levier reseau</b><br><small>poids 2</small></td><td><span class="note points"><span class="plein"></span><span class="plein"></span><span class=""></span>2/3</span></td><td>Associé C (transporteur et logisticien) pourrait fournir transporteurs et chargeurs en pilote ; à confirmer.<span class="cit"><i>p.1</i>« La plateforme qui remplit les camions vides »</span><span class="cit"><i>p.3</i>« Une place de marché qui met en relation chargeurs et transporteurs »</span></td></tr><tr><td><b>conditions</b><br><small>poids 1</small></td><td><span class="note">inconnu</span></td><td>Ni montant levé ni valorisation indiqués.</td></tr></table>
+<h2>Ce que le deck ne dit pas</h2><div class="carte"><ul><li>Montant recherché, valorisation et usage des fonds</li><li>Identité, parcours et temps de travail des fondateurs</li><li>Traction : utilisateurs, transporteurs inscrits, volumes, revenus, pilotes</li><li>Taille et source du marché</li><li>Modèle économique (commission, abonnement) et marges</li><li>Concurrence (bourses de fret existantes)</li><li>Avancement produit (MVP, technologie de matching)</li></ul></div>
+<h2>Questions à poser aux fondateurs</h2><div class="carte"><ol><li>Qui sont les fondateurs, quel est leur parcours dans le transport, et travaillent-ils à temps plein sur Fretly ?</li><li>Quelle traction avez-vous : nombre de transporteurs et chargeurs actifs, trajets appariés, revenus, pilotes ?</li><li>Quel est votre modèle de revenus (commission, abonnement) et quel est le take rate visé ?</li><li>Comment vous différenciez-vous des bourses de fret existantes et comment résolvez-vous le problème de liquidité des deux côtés de la place de marché ?</li><li>Quel montant levez-vous, à quelle valorisation et pour quels jalons ?</li></ol></div>
+<h2>Associés du réseau à consulter</h2><div class="carte"><ul><li><b>Associé C (fictif)</b> : Transporteur et logisticien : expertise en transport routier et supply chain, peut juger la proposition de valeur et ouvrir des pilotes.</li></ul></div>
+<p class="pied">Deck : donnees/decks/fretly.pdf. Fiche préparée par un agent IA (sonnet,
+18 s). Chaque citation a été vérifiée mot pour mot dans le deck par le code ; le score est
+calculé par le code. La décision reste à un humain. <a href="tableau_de_tri.html">Tableau de tri</a></p></main></body></html>
